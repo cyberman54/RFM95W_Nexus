@@ -82,7 +82,7 @@ void RFM_Init()
   //BW = 125 kHz, Coding rate 4/5, Explicit header mode
   RFM_Write(0x1D,0x72);
 
-  //Spreading factor 7, PayloadCRC On
+  //Spreading factor 11, PayloadCRC On
   RFM_Write(0x1E,0xB4);
 
   //Rx Timeout set to 37 symbols
@@ -140,7 +140,7 @@ void RFM_Send_Package(unsigned char *RFM_Tx_Package, unsigned char Package_Lengt
   RFM_Write(0x07,0x06);
   RFM_Write(0x08,0x8B);
 
-  //Switch to SF7 CRC on payload on
+  //Switch to SF11 CRC on payload on
   RFM_Write(0x1E,0xB4);
 
   //Set IQ to normal values
